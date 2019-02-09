@@ -1,0 +1,115 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ISO Management Snuglinux\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-06 10:28+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/"
+
+#: iso-info.php:9
+msgid "Information about the plug-in iso-management-snuglinux"
+msgstr ""
+
+#: iso-info.php:14
+msgid ""
+"The plugin is designed to automatically create ISO images via the Web "
+"interface."
+msgstr ""
+
+#: iso-info.php:20
+msgid "The plugin works in conjunction with the start-user-snuglive script."
+msgstr ""
+
+#: iso-info.php:23
+msgid ""
+"Author: <td class=\"email column-email\" data-colname=\"E-mail\"><a "
+"href=\"mailto:snuglinux@ukr.net\">snuglinux@ukr.net</a></td>"
+msgstr ""
+
+#: iso-management-snuglinux.php:83 iso-main.php:147
+msgid "ISO Management"
+msgstr ""
+
+#: iso-management-snuglinux.php:86
+msgid "Info"
+msgstr ""
+
+#: iso-main.php:12
+msgid "Create iso image"
+msgstr ""
+
+#: iso-main.php:17
+msgid "Creating a new iso image"
+msgstr ""
+
+#: iso-main.php:46
+msgid "Successfully executed script"
+msgstr ""
+
+#: iso-main.php:48
+msgid "Error running script"
+msgstr ""
+
+#: iso-main.php:121
+msgid "Delete file"
+msgstr ""
+
+#: iso-main.php:128 includes/iso-class-table.php:151
+msgid "Delete"
+msgstr ""
+
+#: iso-main.php:129
+msgid "Cancel"
+msgstr ""
+
+#: iso-main.php:152
+msgid "This is the main page of the plugin \"ISO Management\""
+msgstr ""
+
+#: iso-main.php:161
+msgid "New ISO"
+msgstr ""
+
+#: iso-main.php:186
+msgid "Back"
+msgstr ""
+
+#: includes/iso-class-table.php:63
+msgid "There is not a single value."
+msgstr ""
+
+#: includes/iso-class-table.php:70
+msgid "Name"
+msgstr ""
+
+#: includes/iso-class-table.php:71
+msgid "md5sum"
+msgstr ""
+
+#: includes/iso-class-table.php:150 includes/iso-class-table.php:156
+msgid "Download"
+msgstr ""
+
+#. Name of the plugin
+msgid "ISO Management Snuglinux"
+msgstr ""
+
+#. Description of the plugin
+msgid "Control panel ISO images SnugLinux"
+msgstr ""
+
+#. Author of the plugin
+msgid "Khomenko Valery"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://khv.pp.ua"
+msgstr ""
