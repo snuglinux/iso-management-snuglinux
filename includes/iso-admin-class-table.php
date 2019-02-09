@@ -8,7 +8,7 @@ if ( ! class_exists('WP_List_Table')) {
 }
 
 /** Create a new table class that will extend the WP_List_Table */
-class class_iso_table extends WP_List_Table {
+class class_iso_list_table extends WP_List_Table {
 
     /** Prepare the items for the table to process
     * @return Void */
@@ -40,9 +40,9 @@ class class_iso_table extends WP_List_Table {
     function __construct(){
 
        parent::__construct( array(
-            'singular'  => __( 'book',  'computer-accounting' ),    //singular name of the listed records
-            'plural'    => __( 'books', 'computer-accounting' ),   //plural name of the listed records
-            'ajax'      => false        //does this table support ajax?
+            'singular'  => __( 'book',  'computer-accounting' ),  //singular name of the listed records
+            'plural'    => __( 'books', 'computer-accounting' ),  //plural name of the listed records
+            'ajax'      => false                                  //does this table support ajax?
 
        ));
        add_action( 'admin_head', array( &$this, 'admin_header' ) );
@@ -87,11 +87,10 @@ class class_iso_table extends WP_List_Table {
         return $sortable_columns;
     }
 
-    /*** Получить данные таблицы
-    * @return Array */
     private function table_data() {
+        global $wpdb, $iso_table_list;
+
         $path = 'iso';
-        $mask = '*.iso';
         $data = array();
         if ( $path [ strlen( $path ) - 1 ] != '/' ) {
            $path .= '/';
@@ -106,25 +105,26 @@ class class_iso_table extends WP_List_Table {
            $server_name .= '/';
         }
 
-        $files = iso_get_files($full_path, 0, $mask);
-        foreach($files as $file){
-           $name_file = pathinfo($file, PATHINFO_FILENAME);
-           $md5sum_file = $name_file . '.md5';
-           if (file_exists($full_path . $md5sum_file)) {
-              $md5sum = file_get_contents($full_path . $md5sum_file, FALSE, NULL, 0, 100);
-           }
-           else {
-              $md5sum = '';
-           }
-           $link   = 'https://' . $server_name . $path . $file;
-           $link_file = '<a href = '.$link.'>'.$file.'</a> <br>';
-           $data[] = array(
-                   'name'   => $file,
-                   'md5sum' => $md5sum,
-                   'link'   => $link_file
-                   );
-              }
+        $iso_list_array = $wpdb -> get_results( "SELECT * FROM " . $iso_table_list );
+        $data = array();
+        if( $iso_list_array ) {
+            foreach ( $iso_list_array as $in ) {
+                $name        = $in -> name;
+                $md5sum      = $in -> md5sum;
+                $file_iso    = $in -> file_iso;
+                $file_md5sum = $in -> file_md5sum;
+                $link        = 'https://' . $server_name . $path . $file_iso;
+                $link_file   = '<a href = ' . $link . '>' . $file_iso . '</a> <br>';
 
+                $data[] = array(
+                'name'        => $name,
+                'md5sum'      => $md5sum,
+                'file_iso'    => $file_iso,
+                'file_md5sum' => $file_md5sum,
+                'link'        => $link_file
+                );
+             }
+        }
         return $data;
     }
 

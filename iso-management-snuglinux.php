@@ -76,8 +76,8 @@ function iso_add_menu_items(){
     // если создается класс не в add_action() не меняется ширина полей таблицы
     global $TableISO;
 
-    require_once( 'includes/iso-class-table.php' );
-    $TableISO = new class_iso_table();
+    require_once( 'includes/iso-admin-class-table.php' );
+    $TableISO = new class_iso_list_table();
 
     // Add a new top-level menu:
     add_menu_page('ISO Management', __( 'ISO Management', 'iso-management-snuglinux' ), 'iso_list', 'iso-page', 'iso_page', plugins_url( '/images/iso.png', __FILE__ ) );

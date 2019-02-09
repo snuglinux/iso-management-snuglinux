@@ -2,7 +2,7 @@
 /*
 Общие функции
 */
-
+//=========================================
 /* Execute the given command by displaying console output live to the user..
 *  @param string cmd   : command to be executed.
 *  @return array exit_status : exit status of the executed command.
@@ -49,10 +49,11 @@ function liveExecuteCommand($cmd) {
        );
 }
 
-/*************************************/
-//only_dir_or_files: 0 - all
-//                   1 - only dir
-//                   2 - only file
+//=======================================
+// only_dir_or_files:
+//  0 - all
+//  1 - only dir
+//  2 - only file
 function iso_get_files($path, $order = 0, $mask, $only_dir_or_files = 0, $return_full_path = 0) {
   $fdir = array();
   if ( $path [ strlen( $path ) - 1 ] != '/' ) {
@@ -82,7 +83,7 @@ function iso_get_files($path, $order = 0, $mask, $only_dir_or_files = 0, $return
     return ($fdir);
 }
 
-/*********** вывод сообщения ************/
+//============ вывод сообщения =============
 function display_message($string) {
    ?>
       <div class="wrap">

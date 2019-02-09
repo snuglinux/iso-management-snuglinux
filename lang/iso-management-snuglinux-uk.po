@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ISO Management Snuglinux\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-06 10:28+0000\n"
-"PO-Revision-Date: 2018-11-06 10:45+0000\n"
+"POT-Creation-Date: 2019-02-09 21:10+0000\n"
+"PO-Revision-Date: 2019-02-09 21:11+0000\n"
 "Last-Translator: khvalera <khvalera@ukr.net>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk\n"
@@ -12,7 +12,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Loco https://localise.biz/"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.2.0; wp-5.0.3"
 
 #: iso-info.php:9
 msgid "Information about the plug-in iso-management-snuglinux"
@@ -27,8 +28,9 @@ msgstr ""
 "веб-інтерфейсу."
 
 #: iso-info.php:20
-msgid "The plugin works in conjunction with the start-user-snuglive script."
-msgstr "Плагін працює разом із скриптом start-user-snuglive."
+msgid ""
+"The plugin works in conjunction with the start-user-build-snuglive script."
+msgstr "Плагін працює разом зі сценарієм start-user-build-snuglive."
 
 #: iso-info.php:23
 msgid ""
@@ -38,14 +40,6 @@ msgstr ""
 "Автор: <td class=\"email column-email\" data-colname=\"E-mail\"><a "
 "href=\"mailto:snuglinux@ukr.net\">snuglinux@ukr.net</a></td>"
 
-#: iso-management-snuglinux.php:83 iso-main.php:147
-msgid "ISO Management"
-msgstr "Управління ISO"
-
-#: iso-management-snuglinux.php:86
-msgid "Info"
-msgstr "Інформація"
-
 #: iso-main.php:12
 msgid "Create iso image"
 msgstr "Створити iso-образ"
@@ -54,37 +48,60 @@ msgstr "Створити iso-образ"
 msgid "Creating a new iso image"
 msgstr "Створення нового ISO зображення"
 
-#: iso-main.php:46
+#: iso-main.php:31 iso-main.php:98 iso-main.php:147
+#, php-format
+msgid "The %s path does not exist!"
+msgstr "Шлях %s не існує!"
+
+#: iso-main.php:35
+#, php-format
+msgid "The %s file already exists!"
+msgstr "Файл %s вже існує!"
+
+#: iso-main.php:47
 msgid "Successfully executed script"
 msgstr "Успішно виконаний скрипт"
 
-#: iso-main.php:48
+#: iso-main.php:49
 msgid "Error running script"
 msgstr "Помилка виконання сценарію"
 
-#: iso-main.php:121
+#: iso-main.php:187
 msgid "Delete file"
 msgstr "Видалити файл"
 
-#: iso-main.php:128 includes/iso-class-table.php:151
+#: iso-main.php:192
+#, php-format
+msgid "Do you want to delete the %s file?"
+msgstr "Ви хочете видалити файл %s?"
+
+#: iso-main.php:196 includes/iso-class-table.php:151
 msgid "Delete"
 msgstr "Видалити"
 
-#: iso-main.php:129
+#: iso-main.php:197
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: iso-main.php:152
+#: iso-main.php:215 iso-management-snuglinux.php:83
+msgid "ISO Management"
+msgstr "Управління ISO"
+
+#: iso-main.php:220
 msgid "This is the main page of the plugin \"ISO Management\""
 msgstr "Головна сторінка плагіна \"ISO Management\""
 
-#: iso-main.php:161
+#: iso-main.php:229
 msgid "New ISO"
 msgstr "Новий ISO"
 
-#: iso-main.php:186
+#: iso-main.php:254
 msgid "Back"
 msgstr "Назад"
+
+#: iso-management-snuglinux.php:86
+msgid "Info"
+msgstr "Інформація"
 
 #: includes/iso-class-table.php:63
 msgid "There is not a single value."

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ISO Management Snuglinux\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-06 10:28+0000\n"
+"POT-Creation-Date: 2019-02-09 21:10+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -25,21 +25,14 @@ msgid ""
 msgstr ""
 
 #: iso-info.php:20
-msgid "The plugin works in conjunction with the start-user-snuglive script."
+msgid ""
+"The plugin works in conjunction with the start-user-build-snuglive script."
 msgstr ""
 
 #: iso-info.php:23
 msgid ""
 "Author: <td class=\"email column-email\" data-colname=\"E-mail\"><a "
 "href=\"mailto:snuglinux@ukr.net\">snuglinux@ukr.net</a></td>"
-msgstr ""
-
-#: iso-management-snuglinux.php:83 iso-main.php:147
-msgid "ISO Management"
-msgstr ""
-
-#: iso-management-snuglinux.php:86
-msgid "Info"
 msgstr ""
 
 #: iso-main.php:12
@@ -50,36 +43,59 @@ msgstr ""
 msgid "Creating a new iso image"
 msgstr ""
 
-#: iso-main.php:46
+#: iso-main.php:31 iso-main.php:98 iso-main.php:147
+#, php-format
+msgid "The %s path does not exist!"
+msgstr ""
+
+#: iso-main.php:35
+#, php-format
+msgid "The %s file already exists!"
+msgstr ""
+
+#: iso-main.php:47
 msgid "Successfully executed script"
 msgstr ""
 
-#: iso-main.php:48
+#: iso-main.php:49
 msgid "Error running script"
 msgstr ""
 
-#: iso-main.php:121
+#: iso-main.php:187
 msgid "Delete file"
 msgstr ""
 
-#: iso-main.php:128 includes/iso-class-table.php:151
+#: iso-main.php:192
+#, php-format
+msgid "Do you want to delete the %s file?"
+msgstr ""
+
+#: iso-main.php:196 includes/iso-class-table.php:151
 msgid "Delete"
 msgstr ""
 
-#: iso-main.php:129
+#: iso-main.php:197
 msgid "Cancel"
 msgstr ""
 
-#: iso-main.php:152
+#: iso-main.php:215 iso-management-snuglinux.php:83
+msgid "ISO Management"
+msgstr ""
+
+#: iso-main.php:220
 msgid "This is the main page of the plugin \"ISO Management\""
 msgstr ""
 
-#: iso-main.php:161
+#: iso-main.php:229
 msgid "New ISO"
 msgstr ""
 
-#: iso-main.php:186
+#: iso-main.php:254
 msgid "Back"
+msgstr ""
+
+#: iso-management-snuglinux.php:86
+msgid "Info"
 msgstr ""
 
 #: includes/iso-class-table.php:63
