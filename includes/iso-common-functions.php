@@ -1,7 +1,9 @@
 <?php
+
 /*
 Общие функции
 */
+
 //=========================================
 /* Execute the given command by displaying console output live to the user..
 *  @param string cmd   : command to be executed.
@@ -50,33 +52,36 @@ function liveExecuteCommand($cmd) {
 }
 
 //=======================================
+// directory  - сканируемый каталог.
+// sort_order - сортировка
+// $mask      - маска файлов
 // only_dir_or_files:
 //  0 - all
 //  1 - only dir
 //  2 - only file
-function iso_get_files($path, $order = 0, $mask, $only_dir_or_files = 0, $return_full_path = 0) {
+function iso_get_files($directory, $sort_order = 0, $mask = '*', $only_dir_or_files = 0, $return_full_path = 0) {
   $fdir = array();
-  if ( $path [ strlen( $path ) - 1 ] != '/' ) {
-       $path .= '/';
+  if ( $directory [ strlen( $directory ) - 1 ] != '/' ) {
+       $directory .= '/';
   }
-  if (false !== ($files = scandir($path, $order))) {
+  if (false !== ($files = scandir($directory, $sort_order))) {
      array_shift($files); // del '.'
      array_shift($files); // del '..'
      foreach ($files as $file_name) {
              if ( $only_dir_or_files == 0 && fnmatch($mask, $file_name)) {
                   if ($return_full_path == 0)
                      $fdir[] = $file_name;
-                  else $fdir[] = $path. $file_name;
+                  else $fdir[] = $directory. $file_name;
               }
-              elseif ( $only_dir_or_files == 1 && is_dir( $path.'/'.$file_name ) == true && fnmatch($mask, $file_name)) {
+              elseif ( $only_dir_or_files == 1 && is_dir( $directory.'/'.$file_name ) == true && fnmatch($mask, $file_name)) {
                   if ($return_full_path == 0)
                      $fdir[] = $file_name;
-                  else $fdir[] = $path. $file_name;
+                  else $fdir[] = $directory. $file_name;
               }
-              elseif ( $only_dir_or_files == 2 && is_file( $path.'/'.$file_name ) == true && fnmatch($mask, $file_name)) {
+              elseif ( $only_dir_or_files == 2 && is_file( $directory.'/'.$file_name ) == true && fnmatch($mask, $file_name)) {
                   if ($return_full_path == 0)
                      $fdir[] = $file_name;
-                  else $fdir[] = $path. $file_name;
+                  else $fdir[] = $directory. $file_name;
               }
        }
     }
